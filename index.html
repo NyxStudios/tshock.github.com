@@ -42,7 +42,7 @@
 <h3 id="basic-usage">Basic Usage<a id="Basics"></a></h3>
 <p>Now that TShock is running, you may be interested in a few other features prior to playing Terraria.</p>
 <ul>
-<li>You can add admins through two methods. If the user is already registered, you can use &quot;<strong>/user group [username] [group-to-change-to]</strong>&quot;. By default, TShock comes with the &quot;vip&quot; group, the &quot;trustedadmin&quot; group, and the &quot;newadmin&quot; group.</li>
+<li>You can add admins through two methods. If the user is already registered, you can use &quot;<strong>/user group [username] [group-to-change-to]</strong>&quot;. By default, TShock comes with the &quot;vip&quot; group, the &quot;trustedadmin&quot; group, and the &quot;newadmin&quot; group. If the user has yet to register, you can use &quot;<strong>/user add [username]:[password] [group]</strong>&quot; to generate an account with elevated permissions for them.</li>
 <li>When you join the server and already have an account, the server will ask for your account password, even if the server has no password setup. In the event that you set a password on the server, unregistered users will be required to enter it. Users that already have an account must enter their own password.</li>
 <li>If a user wishes to change accounts but retain their group, a config option exists that will allow you to allow users to login to accounts with any username.</li>
 </ul>
@@ -50,129 +50,10 @@
 <h3 id="configuration">Configuration<a id="Configuration"></a></h3>
 <h4 id="permissions">Permissions<a id="Permissions"></a></h4>
 <p>Like Bukkit and other administrative modifications, TShock supports adding groups and permissions. In the current implementation, you can only edit groups ingame, adding and removing them isn't supported <em>yet</em>.</p>
-<h5 id="permission-nodes">Permission Nodes:</h5>
-<h6 id="allowclientsideworldedit"><a id="allowclientsideworldedit">allowclientsideworldedit</a></h6>
-<p><strong>Description:</strong> Allow unrestricted Send Tile Square usage, for client side world editing<br /><strong>Commands:</strong> None</p>
-<h6 id="annoy"><a id="annoy">annoy</a></h6>
-<p><strong>Description:</strong> None<br /><strong>Commands:</strong> /annoy</p>
-<h6 id="ban"><a id="ban">ban</a></h6>
-<p><strong>Description:</strong> User can ban others<br /><strong>Commands:</strong> /ban /banip /unban /unbanip</p>
-<h6 id="buff"><a id="buff">buff</a></h6>
-<p><strong>Description:</strong> User can buff self<br /><strong>Commands:</strong> /buff</p>
-<h6 id="buffplayer"><a id="buffplayer">buffplayer</a></h6>
-<p><strong>Description:</strong> User can buff other players<br /><strong>Commands:</strong> /gbuff(/buffplayer)</p>
-<h6 id="butcher"><a id="butcher">butcher</a></h6>
-<p><strong>Description:</strong> User can kill all enemy npcs<br /><strong>Commands:</strong> /butcher</p>
-<h6 id="bypassinventorychecks"><a id="bypassinventorychecks">bypassinventorychecks</a></h6>
-<p><strong>Description:</strong> Bypass Server Side Inventory checks<br /><strong>Commands:</strong> None</p>
-<h6 id="canbuild"><a id="canbuild">canbuild</a></h6>
-<p><strong>Description:</strong> Required to be able to build (modify tiles and liquid)<br /><strong>Commands:</strong> None</p>
-<h6 id="canchangepassword"><a id="canchangepassword">canchangepassword</a></h6>
-<p><strong>Description:</strong> User can change password in game<br /><strong>Commands:</strong> /password</p>
-<h6 id="canlogin"><a id="canlogin">canlogin</a></h6>
-<p><strong>Description:</strong> User can login in game<br /><strong>Commands:</strong> /login</p>
-<h6 id="canpartychat"><a id="canpartychat">canpartychat</a></h6>
-<p><strong>Description:</strong> User can use party chat in game<br /><strong>Commands:</strong> /p</p>
-<h6 id="canregister"><a id="canregister">canregister</a></h6>
-<p><strong>Description:</strong> User can register account in game<br /><strong>Commands:</strong> /register</p>
-<h6 id="cantalkinthird"><a id="cantalkinthird">cantalkinthird</a></h6>
-<p><strong>Description:</strong> User can talk in third person<br /><strong>Commands:</strong> /me</p>
-<h6 id="causeevents"><a id="causeevents">causeevents</a></h6>
-<p><strong>Description:</strong> None<br /><strong>Commands:</strong> /dropmeteor /star /genore /fullmoon /bloodmoon /invade</p>
-<h6 id="cfg"><a id="cfg">cfg</a></h6>
-<p><strong>Description:</strong> User can edit sevrer configurations<br /><strong>Commands:</strong> /setspawn /reload /serverpassword /save /settle /maxspawns /spawnrate /broadcast(/bc /say) /stats /world</p>
-<h6 id="clearitems"><a id="clearitems">clearitems</a></h6>
-<p><strong>Description:</strong> User can clear item drops.<br /><strong>Commands:</strong> /clear(/clearitems)</p>
-<h6 id="converthardmode"><a id="converthardmode">converthardmode</a></h6>
-<p><strong>Description:</strong> User can convert hallow into corruption and vice-versa<br /><strong>Commands:</strong> /convertcorruption /converthallow /removespecial</p>
-<h6 id="editspawn"><a id="editspawn">editspawn</a></h6>
-<p><strong>Description:</strong> Allows you to edit the spawn<br /><strong>Commands:</strong> /antibuild /protectspawn</p>
-<h6 id="grow"><a id="grow">grow</a></h6>
-<p><strong>Description:</strong> None<br /><strong>Commands:</strong> /grow</p>
-<h6 id="hardmode"><a id="hardmode">hardmode</a></h6>
-<p><strong>Description:</strong> User can change hardmode state.<br /><strong>Commands:</strong> /hardmode /stophardmode(/disablehardmode)</p>
-<h6 id="heal"><a id="heal">heal</a></h6>
-<p><strong>Description:</strong> None<br /><strong>Commands:</strong> /heal</p>
-<h6 id="ignoredamagecap"><a id="ignoredamagecap">ignoredamagecap</a></h6>
-<p><strong>Description:</strong> Prevents your actions from being ignored if damage is too high<br /><strong>Commands:</strong> None</p>
-<h6 id="ignorekilltiledetection"><a id="ignorekilltiledetection">ignorekilltiledetection</a></h6>
-<p><strong>Description:</strong> Prevents you from being reverted by kill tile abuse detection<br /><strong>Commands:</strong> None</p>
-<h6 id="ignoreliquidsetdetection"><a id="ignoreliquidsetdetection">ignoreliquidsetdetection</a></h6>
-<p><strong>Description:</strong> Prevents you from being disabled by liquid set abuse detection<br /><strong>Commands:</strong> None</p>
-<h6 id="ignorenoclipdetection"><a id="ignorenoclipdetection">ignorenoclipdetection</a></h6>
-<p><strong>Description:</strong> Prevents you from being reverted by no clip detection<br /><strong>Commands:</strong> None</p>
-<h6 id="ignoreplacetiledetection"><a id="ignoreplacetiledetection">ignoreplacetiledetection</a></h6>
-<p><strong>Description:</strong> Prevents you from being reverted by place tile abuse detection<br /><strong>Commands:</strong> None</p>
-<h6 id="ignoreprojectiledetection"><a id="ignoreprojectiledetection">ignoreprojectiledetection</a></h6>
-<p><strong>Description:</strong> Prevents you from being disabled by liquid set abuse detection<br /><strong>Commands:</strong> None</p>
-<h6 id="ignorestackhackdetection"><a id="ignorestackhackdetection">ignorestackhackdetection</a></h6>
-<p><strong>Description:</strong> Prevents you from being disabled by stack hack detection<br /><strong>Commands:</strong> None</p>
-<h6 id="ignorestathackdetection"><a id="ignorestathackdetection">ignorestathackdetection</a></h6>
-<p><strong>Description:</strong> Prevents you from being kicked by hacked health detection<br /><strong>Commands:</strong> None</p>
-<h6 id="immunetoban"><a id="immunetoban">immunetoban</a></h6>
-<p><strong>Description:</strong> Prevents you from being banned<br /><strong>Commands:</strong> None</p>
-<h6 id="immunetokick"><a id="immunetokick">immunetokick</a></h6>
-<p><strong>Description:</strong> Prevents you from being kicked<br /><strong>Commands:</strong> None</p>
-<h6 id="item"><a id="item">item</a></h6>
-<p><strong>Description:</strong> User can spawn items<br /><strong>Commands:</strong> /item(/i) /give(/g)</p>
-<h6 id="kick"><a id="kick">kick</a></h6>
-<p><strong>Description:</strong> User can kick others<br /><strong>Commands:</strong> /kick</p>
-<h6 id="kill"><a id="kill">kill</a></h6>
-<p><strong>Description:</strong> None<br /><strong>Commands:</strong> /kill</p>
-<h6 id="logs"><a id="logs">logs</a></h6>
-<p><strong>Description:</strong> Specific log messages are sent to users with this permission<br /><strong>Commands:</strong> /displaylogs</p>
-<h6 id="maintenance"><a id="maintenance">maintenance</a></h6>
-<p><strong>Description:</strong> User is notified when an update is available<br /><strong>Commands:</strong> /clearbans /off(/exit) /restart /off-nosave(/exit-nosave) /checkupdates</p>
-<h6 id="managegroup"><a id="managegroup">managegroup</a></h6>
-<p><strong>Description:</strong> User can manage groups<br /><strong>Commands:</strong> /addgroup /delgroup /modgroup /group</p>
-<h6 id="manageitem"><a id="manageitem">manageitem</a></h6>
-<p><strong>Description:</strong> User can manage item bans<br /><strong>Commands:</strong> /additem(/banitem) /delitem(/unbanitem) /listitems(/listbanneditems) /additemgroup /delitemgroup</p>
-<h6 id="manageregion"><a id="manageregion">manageregion</a></h6>
-<p><strong>Description:</strong> User can edit regions<br /><strong>Commands:</strong> /region /debugreg</p>
-<h6 id="managewarp"><a id="managewarp">managewarp</a></h6>
-<p><strong>Description:</strong> User can manage warps<br /><strong>Commands:</strong> /setwarp /delwarp /hidewarp</p>
-<h6 id="movenpc"><a id="movenpc">movenpc</a></h6>
-<p><strong>Description:</strong> User can change the homes of NPCs.<br /><strong>Commands:</strong> None</p>
-<h6 id="mute"><a id="mute">mute</a></h6>
-<p><strong>Description:</strong> User can mute and unmute users<br /><strong>Commands:</strong> /mute(/unmute)</p>
-<h6 id="pvpfun"><a id="pvpfun">pvpfun</a></h6>
-<p><strong>Description:</strong> None<br /><strong>Commands:</strong> /slap</p>
-<h6 id="reservedslot"><a id="reservedslot">reservedslot</a></h6>
-<p><strong>Description:</strong> Allows you to bypass the max slots for up to 5 slots above your max<br /><strong>Commands:</strong> None</p>
-<h6 id="rootonly"><a id="rootonly">rootonly</a></h6>
-<p><strong>Description:</strong> Meant for super admins only<br /><strong>Commands:</strong> /user /userinfo(/ui) /auth-verify</p>
-<h6 id="seeids"><a id="seeids">seeids</a></h6>
-<p><strong>Description:</strong> User can see the id of players with /who<br /><strong>Commands:</strong> None</p>
-<h6 id="spawnboss"><a id="spawnboss">spawnboss</a></h6>
-<p><strong>Description:</strong> User can spawn bosses<br /><strong>Commands:</strong> /eater /eye /king /skeletron /wof(/wallofflesh) /twins /destroyer /skeletronp(/prime) /hardcore</p>
-<h6 id="spawnmob"><a id="spawnmob">spawnmob</a></h6>
-<p><strong>Description:</strong> User can spawn npcs<br /><strong>Commands:</strong> /spawnmob(/sm)</p>
-<h6 id="startinvasion"><a id="startinvasion">startinvasion</a></h6>
-<p><strong>Description:</strong> User can start invasions (Goblin/Snow Legion) using items<br /><strong>Commands:</strong> None</p>
-<h6 id="summonboss"><a id="summonboss">summonboss</a></h6>
-<p><strong>Description:</strong> User can summon bosses using items<br /><strong>Commands:</strong> None</p>
-<h6 id="time"><a id="time">time</a></h6>
-<p><strong>Description:</strong> None<br /><strong>Commands:</strong> /time</p>
-<h6 id="tp"><a id="tp">tp</a></h6>
-<p><strong>Description:</strong> User can teleport<br /><strong>Commands:</strong> /home /spawn /tp</p>
-<h6 id="tpall"><a id="tpall">tpall</a></h6>
-<p><strong>Description:</strong> Users can tp to anyone<br /><strong>Commands:</strong> None</p>
-<h6 id="tpallow"><a id="tpallow">tpallow</a></h6>
-<p><strong>Description:</strong> Users can stop people from TPing to them<br /><strong>Commands:</strong> /tpallow</p>
-<h6 id="tphere"><a id="tphere">tphere</a></h6>
-<p><strong>Description:</strong> User can teleport people to them<br /><strong>Commands:</strong> /tphere /sendwarp(/sw)</p>
-<h6 id="tphide"><a id="tphide">tphide</a></h6>
-<p><strong>Description:</strong> Users can tp to people without showing a notice<br /><strong>Commands:</strong> None</p>
-<h6 id="usebanneditem"><a id="usebanneditem">usebanneditem</a></h6>
-<p><strong>Description:</strong> Allows you to use banned items<br /><strong>Commands:</strong> None</p>
-<h6 id="warp"><a id="warp">warp</a></h6>
-<p><strong>Description:</strong> User can use warps<br /><strong>Commands:</strong> /warp</p>
-<h6 id="whisper"><a id="whisper">whisper</a></h6>
-<p><strong>Description:</strong> User can whisper to others<br /><strong>Commands:</strong> /whisper(/w /tell) /reply(/r)</p>
-<h6 id="whitelist"><a id="whitelist">whitelist</a></h6>
-<p><strong>Description:</strong> User can modify the whitelist<br /><strong>Commands:</strong> /whitelist</p>
 <h5 id="adding-permissions">Adding permissions:</h5>
-<p>To add a permission to a given group, use the command &quot;<strong>/modgroup [add|del] [group] [permission]</strong>&quot;. Example: <em>/modgroup add trustedadmin tpall</em></p>
+<p>To add a permission to a given group, use the command &quot;<strong>/modgroup [add|del] [group] [permission]</strong>&quot;. Example: <em>/modgroup add trustedadmin tpall</em>.</p>
+<h5 id="permission-nodes">Permission nodes:</h5>
+<p><a href="permissions.html">A list of permission nodes can be found here.</a></p>
 <hr />
 <h4 id="the-config-file">The config file<a id="Config"></a></h4>
 <p>Each TShock installation automatically generates a configuration file which can edit basic settings when the server starts.</p>
