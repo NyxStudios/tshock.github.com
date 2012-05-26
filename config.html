@@ -1,6 +1,6 @@
 <link href="https://raw.github.com/clownfart/Markdown-CSS/master/markdown.css" rel="stylesheet"></link>
 <h1 id="the-config-file">The config file</h1>
-<p><a href="index.html">Back to index</a></p>
+<p><a href="index.md.html">Back to index</a></p>
 <hr />
 <p>Each TShock installation automatically generates a configuration file which can edit basic settings when the server starts.</p>
 <p>The file &quot;config.json&quot; is located in the <em>tshock</em> folder, in the same directory as TerrariaServer.exe.</p>
@@ -98,3 +98,188 @@
 }</code></pre>
 <p>In this file, if you wanted to change the maximum players to 64, you would edit that the file so that the line referring to max players looked like so:</p>
 <pre><code>&quot;MaxSlots&quot;: 64,</code></pre>
+<p>The following is the official documentation for the configuration file:</p>
+<h2 id="allowcorruptioncreep">AllowCorruptionCreep</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Allows corrutption to spread when a world is hardmode.<br /><strong>Default:</strong> &quot;True&quot;</p>
+<h2 id="allowhallowcreep">AllowHallowCreep</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Allows hallow to spread when a world is hardmode.<br /><strong>Default:</strong> &quot;True&quot;</p>
+<h2 id="allowice">AllowIce</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Allow Ice placement even when user does not have canbuild<br /><strong>Default:</strong> &quot;False&quot;</p>
+<h2 id="allowloginanyusername">AllowLoginAnyUsername</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Allows users to login with any username with /login<br /><strong>Default:</strong> &quot;True&quot;</p>
+<h2 id="allowregisteranyusername">AllowRegisterAnyUsername</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Allows users to register any username with /register<br /><strong>Default:</strong> &quot;False&quot;</p>
+<h2 id="autosave">AutoSave</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Enable/Disable Terrarias built in auto save<br /><strong>Default:</strong> &quot;True&quot;</p>
+<h2 id="backupinterval">BackupInterval</h2>
+<p><strong>Type:</strong> Int32<br /><strong>Description:</strong> Backup frequency in minutes. So, a value of 60 = 60 minutes. Backups are stored in the folder.<br /><strong>Default:</strong> &quot;0&quot;</p>
+<h2 id="backupkeepfor">BackupKeepFor</h2>
+<p><strong>Type:</strong> Int32<br /><strong>Description:</strong> How long backups are kept in minutes. 2880 = 2 days.<br /><strong>Default:</strong> &quot;60&quot;</p>
+<h2 id="banonmediumcoredeath">BanOnMediumcoreDeath</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Bans a Hardcore player on death.<br /><strong>Default:</strong> &quot;False&quot;</p>
+<h2 id="bufferpackets">BufferPackets</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Buffers up the packets and sends them out at the end of each frame<br /><strong>Default:</strong> &quot;True&quot;</p>
+<h2 id="chatformat">ChatFormat</h2>
+<p><strong>Type:</strong> String<br /><strong>Description:</strong> Change ingame chat format, {0} = Group Name, {1} = Group Prefix, {2} = Player Name, {3} = Group Suffix, {4} = Chat Message<br /><strong>Default:</strong> &quot;{1}{2}{3}: {4}&quot;</p>
+<h2 id="defaultguestgroupname">DefaultGuestGroupName</h2>
+<p><strong>Type:</strong> String<br /><strong>Description:</strong> Selects the default group name to place non registered users under<br /><strong>Default:</strong> &quot;guest&quot;</p>
+<h2 id="defaultmaximumspawns">DefaultMaximumSpawns</h2>
+<p><strong>Type:</strong> Int32<br /><strong>Description:</strong> The default maximum mobs that will spawn per wave. Higher means more mobs in that wave.<br /><strong>Default:</strong> &quot;5&quot;</p>
+<h2 id="defaultregistrationgroupname">DefaultRegistrationGroupName</h2>
+<p><strong>Type:</strong> String<br /><strong>Description:</strong> Selects the default group name to place new registrants under<br /><strong>Default:</strong> &quot;default&quot;</p>
+<h2 id="defaultspawnrate">DefaultSpawnRate</h2>
+<p><strong>Type:</strong> Int32<br /><strong>Description:</strong> The delay between waves. Shorter values lead to less mobs.<br /><strong>Default:</strong> &quot;600&quot;</p>
+<h2 id="disablebuild">DisableBuild</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Disables any building; placing of blocks<br /><strong>Default:</strong> &quot;False&quot;</p>
+<h2 id="disableclownbombs">DisableClownBombs</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Disables clown bomb projectiles from spawning<br /><strong>Default:</strong> &quot;False&quot;</p>
+<h2 id="disabledungeonguardian">DisableDungeonGuardian</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Disables Dungeon Guardian from being spawned by player packets, this will instead force a respawn<br /><strong>Default:</strong> &quot;False&quot;</p>
+<h2 id="disablehardmode">DisableHardmode</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Disables hardmode, can't never be activated. Overrides /starthardmode<br /><strong>Default:</strong> &quot;False&quot;</p>
+<h2 id="disableinvispvp">DisableInvisPvP</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Disables Invisibility potions from being used in PvP (Note, they can use them on the client, but the effect isn't sent to the rest of the server)<br /><strong>Default:</strong> &quot;False&quot;</p>
+<h2 id="disableloginbeforejoin">DisableLoginBeforeJoin</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Disable users from being able to login with account password when joining<br /><strong>Default:</strong> &quot;False&quot;</p>
+<h2 id="disablepiggybanksonssi">DisablePiggybanksOnSSI</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Prevent banks on SSI<br /><strong>Default:</strong> &quot;False&quot;</p>
+<h2 id="disableplayercountreporting">DisablePlayerCountReporting</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Disables reporting of playercount to the stat system.<br /><strong>Default:</strong> &quot;False&quot;</p>
+<h2 id="disablesnowballs">DisableSnowBalls</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Disables snow ball projectiles from spawning<br /><strong>Default:</strong> &quot;False&quot;</p>
+<h2 id="disablespewlogs">DisableSpewLogs</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Force-Disable printing logs to players with the log permission<br /><strong>Default:</strong> &quot;True&quot;</p>
+<h2 id="disabletombstones">DisableTombstones</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Disable tombstones for all players.<br /><strong>Default:</strong> &quot;True&quot;</p>
+<h2 id="displayiptoadmins">DisplayIPToAdmins</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Displays a player's IP on join to everyone who has the log permission<br /><strong>Default:</strong> &quot;False&quot;</p>
+<h2 id="enablebanonusernames">EnableBanOnUsernames</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Enables kicking of banned users by matching their Character Name<br /><strong>Default:</strong> &quot;False&quot;</p>
+<h2 id="enablednshostresolution">EnableDNSHostResolution</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Enables DNS resolution of incoming connections with GetGroupForIPExpensive.<br /><strong>Default:</strong> &quot;False&quot;</p>
+<h2 id="enablegeoip">EnableGeoIP</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> This will announce a player's location on join<br /><strong>Default:</strong> &quot;False&quot;</p>
+<h2 id="enableinsecuretilefixes">EnableInsecureTileFixes</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Some tiles are 'fixed' by not letting TShock handle them. Disabling this may break certain asthetic tiles.<br /><strong>Default:</strong> &quot;True&quot;</p>
+<h2 id="enableipbans">EnableIPBans</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Enables kicking of banned users by matching their IP Address<br /><strong>Default:</strong> &quot;True&quot;</p>
+<h2 id="enabletokenendpointauthentication">EnableTokenEndpointAuthentication</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> This will turn on a token requirement for the /status API endpoint.<br /><strong>Default:</strong> &quot;False&quot;</p>
+<h2 id="enablewhitelist">EnableWhitelist</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Enable or disable the whitelist based on IP addresses in whitelist.txt<br /><strong>Default:</strong> &quot;False&quot;</p>
+<h2 id="forcetime">ForceTime</h2>
+<p><strong>Type:</strong> String<br /><strong>Description:</strong> Force the world time to be normal, day, or night<br /><strong>Default:</strong> &quot;normal&quot;</p>
+<h2 id="hardcoreonly">HardcoreOnly</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Hardcore players ONLY. This means softcore players cannot join.<br /><strong>Default:</strong> &quot;False&quot;</p>
+<h2 id="hashalgorithm">HashAlgorithm</h2>
+<p><strong>Type:</strong> String<br /><strong>Description:</strong> Valid types are &quot;sha512&quot;, &quot;sha256&quot;, &quot;md5&quot;, append with &quot;-xp&quot; for the xp supported algorithms<br /><strong>Default:</strong> &quot;sha512&quot;</p>
+<h2 id="ignorenoclip">IgnoreNoClip</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Ignores all no clip checks for players<br /><strong>Default:</strong> &quot;False&quot;</p>
+<h2 id="ignoreprojkill">IgnoreProjKill</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Ignores checking to see if player 'can' kill a projectile<br /><strong>Default:</strong> &quot;False&quot;</p>
+<h2 id="ignoreprojupdate">IgnoreProjUpdate</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Ignores checking to see if player 'can' update a projectile<br /><strong>Default:</strong> &quot;False&quot;</p>
+<h2 id="infiniteinvasion">InfiniteInvasion</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Enable the ability for invaison size to never decrease. Make sure to run /invade, and note that this adds 2 million+ goblins to the spawn que for the map.<br /><strong>Default:</strong> &quot;False&quot;</p>
+<h2 id="invasionmultiplier">InvasionMultiplier</h2>
+<p><strong>Type:</strong> Int32<br /><strong>Description:</strong> The equation for calculating invasion size is 100 + (multiplier * (number of active players with greater than 200 health))<br /><strong>Default:</strong> &quot;1&quot;</p>
+<h2 id="kickonmediumcoredeath">KickOnMediumcoreDeath</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Kicks a Hardcore player on death.<br /><strong>Default:</strong> &quot;False&quot;</p>
+<h2 id="kickproxyusers">KickProxyUsers</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Kicks users using a proxy as identified with the GeoIP database<br /><strong>Default:</strong> &quot;True&quot;</p>
+<h2 id="logondiscardthreshold">LogonDiscardThreshold</h2>
+<p><strong>Type:</strong> Int32<br /><strong>Description:</strong> Time, in milliseconds, to disallow discarding items after logging in when ServerSideInventory is ON<br /><strong>Default:</strong> &quot;250&quot;</p>
+<h2 id="masterserver">MasterServer</h2>
+<p><strong>Type:</strong> String<br /><strong>Description:</strong> Not implemented<br /><strong>Default:</strong> &quot;127.0.0.1&quot;</p>
+<h2 id="maxdamage">MaxDamage</h2>
+<p><strong>Type:</strong> Int32<br /><strong>Description:</strong> The maximum damage a player/npc can inflict<br /><strong>Default:</strong> &quot;175&quot;</p>
+<h2 id="maximumloginattempts">MaximumLoginAttempts</h2>
+<p><strong>Type:</strong> Int32<br /><strong>Description:</strong> Number of failed login attempts before kicking the player.<br /><strong>Default:</strong> &quot;3&quot;</p>
+<h2 id="maxprojdamage">MaxProjDamage</h2>
+<p><strong>Type:</strong> Int32<br /><strong>Description:</strong> The maximum damage a projectile can inflict<br /><strong>Default:</strong> &quot;175&quot;</p>
+<h2 id="maxrangefordisabled">MaxRangeForDisabled</h2>
+<p><strong>Type:</strong> Int32<br /><strong>Description:</strong> The maximum distance players disabled for various reasons can move from<br /><strong>Default:</strong> &quot;10&quot;</p>
+<h2 id="maxslots">MaxSlots</h2>
+<p><strong>Type:</strong> Int32<br /><strong>Description:</strong> Max slots for the server. If you want people to be kicked with &quot;Server is full&quot; set this to how many players you want max and then set Terraria max players to 2 higher.<br /><strong>Default:</strong> &quot;8&quot;</p>
+<h2 id="mediumcorebanreason">MediumcoreBanReason</h2>
+<p><strong>Type:</strong> String<br /><strong>Description:</strong> Bans a Mediumcore player on death.<br /><strong>Default:</strong> &quot;Death results in a ban&quot;</p>
+<h2 id="mediumcorekickreason">MediumcoreKickReason</h2>
+<p><strong>Type:</strong> String<br /><strong>Description:</strong> Kicks a Mediumcore player on death.<br /><strong>Default:</strong> &quot;Death results in a kick&quot;</p>
+<h2 id="mediumcoreonly">MediumcoreOnly</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Mediumcore players ONLY. This means softcore players cannot join.<br /><strong>Default:</strong> &quot;False&quot;</p>
+<h2 id="mysqldbname">MySqlDbName</h2>
+<p><strong>Type:</strong> String<br /><strong>Description:</strong> Database name to connect to<br /><strong>Default:</strong> &quot;&quot;</p>
+<h2 id="mysqlhost">MySqlHost</h2>
+<p><strong>Type:</strong> String<br /><strong>Description:</strong> The MySQL Hostname and port to direct connections to<br /><strong>Default:</strong> &quot;localhost:3306&quot;</p>
+<h2 id="mysqlpassword">MySqlPassword</h2>
+<p><strong>Type:</strong> String<br /><strong>Description:</strong> Database password to connect with<br /><strong>Default:</strong> &quot;&quot;</p>
+<h2 id="mysqlusername">MySqlUsername</h2>
+<p><strong>Type:</strong> String<br /><strong>Description:</strong> Database username to connect with<br /><strong>Default:</strong> &quot;&quot;</p>
+<h2 id="preventbanneditemspawn">PreventBannedItemSpawn</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Prevent banned items from being /i or /give<br /><strong>Default:</strong> &quot;False&quot;</p>
+<h2 id="projectilethreshold">ProjectileThreshold</h2>
+<p><strong>Type:</strong> Int32<br /><strong>Description:</strong> Disable a player if they exceed this number of projectile new within 1 second.<br /><strong>Default:</strong> &quot;50&quot;</p>
+<h2 id="projignoreshrapnel">ProjIgnoreShrapnel</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Ignore shrapnel from crystal bullets for Projectile Threshold.<br /><strong>Default:</strong> &quot;True&quot;</p>
+<h2 id="pvpmode">PvPMode</h2>
+<p><strong>Type:</strong> String<br /><strong>Description:</strong> Set the server pvp mode. Vaild types are, &quot;normal&quot;, &quot;always&quot;, &quot;disabled&quot;<br /><strong>Default:</strong> &quot;normal&quot;</p>
+<h2 id="rangechecks">RangeChecks</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Global protection agent for any block distance based anti-grief check.<br /><strong>Default:</strong> &quot;True&quot;</p>
+<h2 id="rconpassword">RconPassword</h2>
+<p><strong>Type:</strong> String<br /><strong>Description:</strong> Not implemented<br /><strong>Default:</strong> &quot;&quot;</p>
+<h2 id="rconport">RconPort</h2>
+<p><strong>Type:</strong> Int32<br /><strong>Description:</strong> Not implemented<br /><strong>Default:</strong> &quot;7777&quot;</p>
+<h2 id="regionprotectchests">RegionProtectChests</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Protect chests with region and build permissions<br /><strong>Default:</strong> &quot;False&quot;</p>
+<h2 id="rememberleavepos">RememberLeavePos</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Remembers where a player left off. It works by remembering the IP, NOT the character.<br />eg. When you try to disconnect, and reconnect to be automatically placed at spawn, you'll be at your last location. Note: Won't save after server restarts.<br /><strong>Default:</strong> &quot;False&quot;</p>
+<h2 id="requirelogin">RequireLogin</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Require all players to register or login before being allowed to play.<br /><strong>Default:</strong> &quot;False&quot;</p>
+<h2 id="restapienabled">RestApiEnabled</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Enable/Disable the rest api.<br /><strong>Default:</strong> &quot;False&quot;</p>
+<h2 id="restapiport">RestApiPort</h2>
+<p><strong>Type:</strong> Int32<br /><strong>Description:</strong> This is the port which the rest api will listen on.<br /><strong>Default:</strong> &quot;7878&quot;</p>
+<h2 id="saveworldoncrash">SaveWorldOnCrash</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> This will save the world if Terraria crashes from an unhandled exception.<br /><strong>Default:</strong> &quot;True&quot;</p>
+<h2 id="serverfullnoreservedreason">ServerFullNoReservedReason</h2>
+<p><strong>Type:</strong> String<br /><strong>Description:</strong> String that is used when kicking people when the server is full with no reserved slots.<br /><strong>Default:</strong> &quot;Server is full. No reserved slots open.&quot;</p>
+<h2 id="serverfullreason">ServerFullReason</h2>
+<p><strong>Type:</strong> String<br /><strong>Description:</strong> String that is used when kicking people when the server is full.<br /><strong>Default:</strong> &quot;Server is full&quot;</p>
+<h2 id="servername">ServerName</h2>
+<p><strong>Type:</strong> String<br /><strong>Description:</strong> Used when replying to a rest /status request.<br /><strong>Default:</strong> &quot;&quot;</p>
+<h2 id="servernickname">ServerNickname</h2>
+<p><strong>Type:</strong> String<br /><strong>Description:</strong> This is used when the API endpoint /status is queried.<br /><strong>Default:</strong> &quot;TShock Server&quot;</p>
+<h2 id="serverpassword">ServerPassword</h2>
+<p><strong>Type:</strong> String<br /><strong>Description:</strong> Server password required to join server<br /><strong>Default:</strong> &quot;&quot;</p>
+<h2 id="serverport">ServerPort</h2>
+<p><strong>Type:</strong> Int32<br /><strong>Description:</strong> The port the server runs on.<br /><strong>Default:</strong> &quot;7777&quot;</p>
+<h2 id="serversideinventory">ServerSideInventory</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Enable Server Side Inventory checks, EXPERIMENTAL<br /><strong>Default:</strong> &quot;False&quot;</p>
+<h2 id="serversideinventorysave">ServerSideInventorySave</h2>
+<p><strong>Type:</strong> Int32<br /><strong>Description:</strong> How often SSI should save, in minutes<br /><strong>Default:</strong> &quot;15&quot;</p>
+<h2 id="spawnprotection">SpawnProtection</h2>
+<p><strong>Type:</strong> Boolean<br /><strong>Description:</strong> Prevents tiles from being placed within SpawnProtectionRadius of the default spawn.<br /><strong>Default:</strong> &quot;True&quot;</p>
+<h2 id="spawnprotectionradius">SpawnProtectionRadius</h2>
+<p><strong>Type:</strong> Int32<br /><strong>Description:</strong> Radius from spawn tile for SpawnProtection.<br /><strong>Default:</strong> &quot;10&quot;</p>
+<h2 id="statuespawn200">StatueSpawn200</h2>
+<p><strong>Type:</strong> Int32<br /><strong>Description:</strong> How many things a statue can spawn within 200 pixels(?) before it stops spawning. Default = 3<br /><strong>Default:</strong> &quot;3&quot;</p>
+<h2 id="statuespawn600">StatueSpawn600</h2>
+<p><strong>Type:</strong> Int32<br /><strong>Description:</strong> How many things a statue can spawn within 600 pixels(?) before it stops spawning. Default = 6<br /><strong>Default:</strong> &quot;6&quot;</p>
+<h2 id="statuespawnworld">StatueSpawnWorld</h2>
+<p><strong>Type:</strong> Int32<br /><strong>Description:</strong> How many things a statue spawns can exist in the world before it stops spawning. Default = 10<br /><strong>Default:</strong> &quot;10&quot;</p>
+<h2 id="storagetype">StorageType</h2>
+<p><strong>Type:</strong> String<br /><strong>Description:</strong> Valid types are &quot;sqlite&quot; and &quot;mysql&quot;<br /><strong>Default:</strong> &quot;sqlite&quot;</p>
+<h2 id="superadminchatprefix">SuperAdminChatPrefix</h2>
+<p><strong>Type:</strong> String<br /><strong>Description:</strong> Super admin group chat prefix<br /><strong>Default:</strong> &quot;(Admin) &quot;</p>
+<h2 id="superadminchatrgb">SuperAdminChatRGB</h2>
+<p><strong>Type:</strong> Single[]<br /><strong>Description:</strong> #.#.#. = Red/Blue/Green - RGB Colors for the Admin Chat Color. Max value: 255<br /><strong>Default:</strong> &quot;System.Single[]&quot;</p>
+<h2 id="superadminchatsuffix">SuperAdminChatSuffix</h2>
+<p><strong>Type:</strong> String<br /><strong>Description:</strong> Super admin group chat suffix<br /><strong>Default:</strong> &quot;&quot;</p>
+<h2 id="tilekillthreshold">TileKillThreshold</h2>
+<p><strong>Type:</strong> Int32<br /><strong>Description:</strong> Disable/Revert a player if they exceed this number of tile kills within 1 second.<br /><strong>Default:</strong> &quot;60&quot;</p>
+<h2 id="tileliquidthreshold">TileLiquidThreshold</h2>
+<p><strong>Type:</strong> Int32<br /><strong>Description:</strong> Disable a player if they exceed this number of liquid sets within 1 second.<br /><strong>Default:</strong> &quot;15&quot;</p>
+<h2 id="tileplacethreshold">TilePlaceThreshold</h2>
+<p><strong>Type:</strong> Int32<br /><strong>Description:</strong> Disable/Revert a player if they exceed this number of tile places within 1 second.<br /><strong>Default:</strong> &quot;20&quot;</p>
+<h2 id="whitelistkickreason">WhitelistKickReason</h2>
+<p><strong>Type:</strong> String<br /><strong>Description:</strong> String that is used when a user is kicked due to not being on the whitelist.<br /><strong>Default:</strong> &quot;You are not on the whitelist.&quot;</p>
